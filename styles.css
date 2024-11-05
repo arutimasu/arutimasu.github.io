@@ -1,0 +1,59 @@
+body {
+    background-image: url("Горы.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+     /*width: 1000px;
+    margin: 0 auto;
+    
+    padding: 100px 20px 20px 20px;
+    */
+}
+
+/*center {
+    background: lightgray;
+    font-family: monospace;
+    color: white;
+}*/
+nav { 
+  
+    background: lightgray;
+    font-family: monospace;
+    font-size: 15px;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0; right: 0;
+    
+}
+label {cursor: pointer; color: black;}
+ul {list-style: none; }
+.list {display: none; padding-left: 145px}
+.checkbox {display: none;}
+
+.checkbox:checked ~ .list {
+  display: block;
+}
+
+p {
+    /*background:  rgba(225,225,225, 0.5);*/
+    /*height: 1000px;*/
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+a:hover {
+    background: blue;
+    color: white;
+    
+    text-decoration: none;
+   }
+article{
+    background: rgba(225,225,225, 0.8);
+   
+    padding: 5px;
+    margin: 10px;
+}
+
