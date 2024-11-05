@@ -1,0 +1,237 @@
+<meta charset="utf-8">
+<html>
+<head>
+<title>My site</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<nav>
+<a href="index.html">  Главная   </a>
+<a href="#3.html">  Обо мне </a>
+<!--<a href="articles.html">   Статьи  </a>-->
+  <label class="checkbox1">
+    <input type="checkbox" class="checkbox">
+    Статьи
+    <ul class="list">		
+      <li><a href="articles.html">Python</a></li>
+    <li><a href="tech.html">Как настоить IPv6.</a></li>
+      <li><a href="#">Страница</a></li>
+    </ul> 
+  </label>
+
+</nav>
+<article>
+<h1>Урок 1. Переменные</h1>
+
+<p>Возьмём самый рассмостранёный пример первой программы для всех начинающих программистов:</p>
+
+<code>print('Hello, world!')</code>
+
+<p>Что делает эта функция? Судя из названия (print), она печатает на экран строку (Hello, world! или Привет, мир! в перовде с английского.)</p>
+
+<p>Теперь перейдём к переменным.</p>
+
+<p>x = 2 или y=3 это пременные, которые представляют собой участки памяти хранящие информацию (числа, строки, объекты(об этом позже)). Они нам знакомы ещё с математики. Теперь подставим их в функцию вывода:</p>
+<pre>
+<code>
+x = 2
+
+y = 3
+
+print(x+y)
+</code>
+</pre>
+
+<p>Получим в выводе число пять.</p>
+
+<p>Мы могли также подставить строку «Hello, world» в print через перменную str (переменные в программировании принято называть по английски, чтобы код могли читать другие. Здесть str от слова string - строка)</p>
+<pre>
+<code>
+str = 'Hello, world!'
+
+print(str)
+</code>
+</pre>
+<p>и изменять её в процессе работы программы:</p>
+<pre>
+<code>
+str = 'Hello, world!'
+
+print(str)
+
+str = 'Hello, me!'
+
+print(str)
+</code>
+</pre>
+<p>Теперь напишем какое-то осмысленое приложение. Имея некоторые навыки мы можем написать простейший калькулятор используя функцию ввода:</p>
+<pre>
+<code>
+x = int(input('Input the x number: '))
+
+y = int(input('Input the y number: '))
+
+print('Result of addition: ', x + y)
+
+print('Result of multiplication: ', x * y)
+
+print('Result of subtraction: ', x - y)
+
+print('Result of division: ', x / y)
+</code>
+</pre>
+<blockquote>
+    Функция int() здесь используется для преобразование возвращаемого значения функции в число, как и функция str() для преоброзования её в строку.
+</blockquote>
+И т.д. можно продолжать список математических операций над двумями переменными, но мы остановились на самых базовых из которых возможно состоит вся математика. Компьютеры зачастую понимают только арифметику поэтому для них были разработаны математические функции на базе арифметики.
+</article>
+<article>
+<h1>Урок 2. Условные выражения.</h1>
+
+Для создания логики программ кроме выполнеия последовательных действий применяют ещё и условия. Например:
+<pre>
+<code>
+if x > y:
+
+    print('x is greater then y')
+</code>
+</pre>
+
+<p>Напечатает строку, если переменная x будет больше y.</p>
+
+<p>Также можно использовать оператор == для сравнения:</p>
+<pre>
+<code>
+first_word = input()
+
+second_word = input()
+
+if first_word == second_word:
+
+    print('These word are equal.')
+
+else:
+
+    print('These word are NOT equal.')
+</code>
+</pre>
+<p>Если введёные слова будут не равны сработает дополнительный оператор else который об этом предупредит.</p>
+
+<p>Теперь модернизируем нашу прошлую программу-калькулятор:</p>
+
+<pre>
+<code>
+op = input('Enter the x operation: ')
+
+x = input('Input the x number: ')
+
+y = input('Input the y number: ')
+
+if op == '+':
+
+    print('Result of addition: ', x + y)
+
+elif op == '-':
+
+    print('Result of subtraction: ', x - y)
+
+elif op == '*':
+
+    print('Result of multiplication: ', x * y)
+
+elif op == '/':
+
+    print('Result of division: ', x / y)
+
+else:
+
+    print('Unknown operation. Use +, - , * , /.')
+</code>
+</pre>
+<p>* <code>elif</code> (else if) здесь используется для создания цепочки условий при невыполнении которых срабатывает общее правило else.</p>
+
+</article>
+
+<article>
+<h1>Урок 3. Циклы и массивы (списки)</h1>
+
+<p>Чтобы не повторять однотипные действия в языках програмирования есть такое понятие как циклы. Например цикл:</p>
+<pre>
+<code>
+for i in range(5):
+
+    print('Hello, world!')
+</code>
+</pre>
+<p>Напечатает знаменитую строку «Hello, world!» 5 раз вместо поочерёдного написания строк:</p>
+<pre>
+<code>
+print('Hello, world!')
+
+print('Hello, world!')
+
+print('Hello, world!')
+
+print('Hello, world!')
+
+print('Hello, world!')
+</code>
+</pre>
+<p>которые можно заменть описаными в начале статьи двумя строчками кода.</p>
+
+<p>Циклы также нередко используются для перечисления элементов массива:</p>
+<pre>
+<code>
+numbers = ['Раз', 'два', 'три', 'четыре','пять','Вышел зайчик погулять']
+
+for i in numbers:
+
+    print(i)
+</code>
+</pre>
+<p>Массив - переменная, которая хранит несколько значений. В терминологии Python называется списком и может хранить разные типы данных.</p>
+
+<p>Пустой массив:</p>
+
+<code>array = []</code>
+
+<p>Обращение к массиву:</p>
+
+<code>array[порядковый номер элемента]</code>
+
+<p><i>Замечание: Порядковый номер массива(индекс) во многих языках программирования начинается с нуля, а не единицы.</i></p>
+
+<p>Итак модернизируем наконец наш калькулятор чтобы он мог складывать что-то кроме двух чисел:</p>
+<pre>
+<code>
+str = input()
+
+numbers = str.split(" ") #Используем в качестве разделителя чисел пробел
+
+result = int(numbers[0]) #Собираем результаты операций в первое число
+
+for i in range(len(numbers)): #Получаем размер массива numbers
+
+    if numbers[i] == '+':
+
+        result += int(numbers[i+1]) #Прибавляем следующий после знака + элемент
+
+    if numbers[i] == '-':
+
+        result -= int(numbers[i+1]) #Вычитаем следующий после знака -элемент
+
+print(result)
+</code>
+</pre>
+
+<samp>Ввод:
+
+3 - 2 + 2
+<br><br>
+Вывод:
+
+3
+</samp>
+</article>
+</body>
+</html>
